@@ -1,3 +1,7 @@
+/**
+ * The `VectorStack` class extends `AbstractStack` and implements a stack using a `Vector` as the
+ * underlying data structure.
+ */
 import java.util.Vector;
 
 class VectorStack<T> extends AbstractStack<T> {
