@@ -1,3 +1,6 @@
+/**
+ * The `ArrayListStack` class implements a stack using an `ArrayList` in Java.
+ */
 import java.util.ArrayList;
 
 class ArrayListStack<T> extends AbstractStack<T> {
