@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 /**
  * The `AbstractListADT` class is an abstract class that implements the `ListADT` interface and
  * provides a protected `LinkedList` field with methods to check if the list is empty.
