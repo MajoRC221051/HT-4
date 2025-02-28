@@ -1,4 +1,4 @@
-class DoublyLinkedList<T> extends AbstractListADT<T> {
+class DublyLinkedList<T> extends AbstractListADT<T> {
     private class Node {
         T data;
         @SuppressWarnings("unused")
@@ -39,3 +39,36 @@ class DoublyLinkedList<T> extends AbstractListADT<T> {
         return data;
     }
 }
+
+
+
+ 
+ * 
+ 
+
+    
+        
+        
+        
+
+        
+            
+            
+        
+    
+
+    
+
+    
+    
+        
+        
+            
+        
+            
+            
+            
+        
+    
+
+    
