@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 interface ListADT<T> {
     void add(T item);
 
@@ -9,42 +11,23 @@ interface ListADT<T> {
 abstract class AbstractListADT<T> implements ListADT<T> {
     protected LinkedList<T> list = new LinkedList<>();
 
+    @Override
     public boolean isEmpty() {
         return list.isEmpty();
     }
 }
 
 class SinglyLinkedList<T> extends AbstractListADT<T> {
-    private class Node {
-        T data;
-        Node next;
-
-        Node(T data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-
-    private Node head;
 
     @Override
     public void add(T data) {
-        if (head == null)
-            head = new Node(data);
-        else {
-            Node temp = head;
-            while (temp.next != null)
-                temp = temp.next;
-            temp.next = new Node(data);
-        }
+        list.add(data); // Usa la lista heredada en lugar de head
     }
 
     @Override
     public T remove() {
-        if (head == null)
+        if (list.isEmpty())
             return null;
-        T data = head.data;
-        head = head.next;
-        return data;
+        return list.removeFirst(); // Usa removeFirst() para mantener la lógica de pila
     }
 }
