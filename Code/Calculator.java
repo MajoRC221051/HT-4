@@ -1,12 +1,20 @@
 import java.util.Stack;
 
+/**
+ * The class Calculator provides a singleton instance and methods to evaluate postfix expressions and
+ * convert infix expressions to postfix.
+ */
+/**
+ * The class Calculator provides a singleton instance and a method to evaluate postfix expressions.
+ */
 class Calculator {
     private static Calculator instance;
 
     private Calculator() {
     }
 
-    /**
+    
+    /** 
      * @return Calculator
      */
     public static Calculator getInstance() {
@@ -22,7 +30,7 @@ class Calculator {
     public String infixToPostfix(String expr) {
         Stack<Character> stack = new Stack<>();
         StringBuilder output = new StringBuilder();
-
+        
         for (char ch : expr.toCharArray()) {
             if (Character.isDigit(ch)) {
                 output.append(ch);
@@ -40,24 +48,22 @@ class Calculator {
                 stack.push(ch);
             }
         }
-
+    
         while (!stack.isEmpty()) {
             output.append(stack.pop());
         }
-
+    
         return output.toString();
     }
-
+    
     private int precedence(char ch) {
         switch (ch) {
-            case '+':
-            case '-':
-                return 1;
-            case '*':
-            case '/':
-                return 2;
-            default:
-                return -1;
+            case '+': case '-': return 1;
+            case '*': case '/': return 2;
+            default: return -1;
         }
     }
 }
+
+
+
