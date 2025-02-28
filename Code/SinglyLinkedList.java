@@ -1,3 +1,7 @@
+/**
+ * The code defines a singly linked list implementation that extends an abstract class providing basic
+ * list operations.
+ */
 import java.util.LinkedList;
 
 interface ListADT<T> {
@@ -11,6 +15,10 @@ interface ListADT<T> {
 abstract class AbstractListADT<T> implements ListADT<T> {
     protected LinkedList<T> list = new LinkedList<>();
 
+    
+    /** 
+     * @return boolean
+     */
     @Override
     public boolean isEmpty() {
         return list.isEmpty();

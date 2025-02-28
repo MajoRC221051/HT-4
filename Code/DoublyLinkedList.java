@@ -1,6 +1,10 @@
+/**
+ * The `DoublyLinkedList` class implements a doubly linked list data structure in Java.
+ */
 class DoublyLinkedList<T> extends AbstractListADT<T> {
     private class Node {
         T data;
+        @SuppressWarnings("unused")
         Node next, prev;
 
         Node(T data) {
