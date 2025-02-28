@@ -11,6 +11,10 @@ interface ListADT<T> {
 abstract class AbstractListADT<T> implements ListADT<T> {
     protected LinkedList<T> list = new LinkedList<>();
 
+    /**
+     * @return boolean
+     */
+
     @Override
     public boolean isEmpty() {
         return list.isEmpty();
